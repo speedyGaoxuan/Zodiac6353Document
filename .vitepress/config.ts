@@ -33,7 +33,16 @@ const config = defineConfig({
           text: '技术文档',
           items: [
             { text: '总览', link: '/tech/overview' },
-            { text: '机械系统', link: '/tech/mechanical' },
+            {
+              text: '机械系统',
+              collapsed: false,
+              items: [
+                { text: '概览', link: '/tech/mechanical' },
+                { text: '底盘维修', link: '/tech/mechanical/chassis-maintenance' },
+                { text: '发射器维修', link: '/tech/mechanical/launcher-maintenance' },
+                { text: '电机更换', link: '/tech/mechanical/motor-replacement' }
+              ]
+            },
             { text: '电气系统', link: '/tech/electrical' },
             { text: '代码架构', link: '/tech/code-architecture' }
           ]
